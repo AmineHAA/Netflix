@@ -1,5 +1,6 @@
 package Model;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 import javax.persistence.Entity;
@@ -7,8 +8,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.hibernate.type.SerializableType;
+
 @Entity
-public class User {
+public class User  implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -30,8 +33,8 @@ public class User {
 	public Long getId() {
 		return id;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setId(int id2) {
+		this.id = (long) id2;
 	}
 	public String getPseudo() {
 		return pseudo;

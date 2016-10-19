@@ -1,0 +1,50 @@
+
+
+<div class="well">
+    PAGE D'INSCRIPTION.
+</div>
+
+
+<form class="form-horizontal" name="ajoutUser" novalidate>
+    <div class="control-group">
+        <label for="name" class="control-label">Nom  </label>
+
+        <div class="controls">
+            <input type="text" id="name" name="name" ng-model="u.name"
+                   class="input-xlarge" placeholder="nom ..." required/>
+        </div>
+    </div>
+    <div class="control-group">
+        <label for="prenom" class="control-label">Prenom  </label>
+
+        <div class="controls">
+            <input type="text" id="prenom" name="prenom" ng-model="u.prenom"
+                   class="input-xlarge" placeholder="prenom..." required/>
+        </div>
+    </div>
+    <div class="control-group">
+        <label for="password" class="control-label">Password  </label>
+
+        <div class="controls">
+            <input type="text" id="password" name="password" ng-model="u.password"
+                   class="input-xlarge" placeholder="password..." required/>
+        </div>
+    </div>
+    <div class="control-group">
+        <label for="name" class="control-label">Mail </label>
+
+        <div class="controls">
+            <input type="email" id="mail" name="mail" ng-model="u.mail"
+                   class="input-xlarge" placeholder="mail..." required/>
+        </div>
+    </div>
+    
+   
+    <div class="form-actions">
+        <button type="submit" class="btn btn-success"
+                ng-disabled="ajoutUser.$invalid"
+                ng-click="addUser(u, param)">Ajouter
+        </button>
+    </div>
+</form>
+
